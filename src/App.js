@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './logo.jpg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is my first message!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <h1>INCEPTION</h1>
+        <img src={logo} alt="Logo" />
+      </div>
+      <div class="container">
+        <h1>Other Movies</h1>
+        <ul class="rowList">
+            <li>Black Mirror</li>
+            <li>Breaking Bad</li>
+            <li>Death Note</li>
+        </ul>
+        <ul class="rowList">
+            <li>Game of Thrones</li>
+            <li>The Walking Death</li>
+            <li>The Wire</li>
+          </ul>
+        </div>
+    </>
   );
 }
 

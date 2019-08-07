@@ -1,5 +1,11 @@
 import React from 'react';
 import logo from './logo.jpg';
+import blackmirror from './blackmirror.jpeg';
+import breakingbad from './breakingbad.jpeg';
+import deathnote from './deathnote.jpeg';
+import gameofthrones from './gameofthrones.jpeg';
+import thewalkingdeath from './thewalkingdeath.jpeg';
+import thewire from './thewire.jpeg';
 import './App.css';
 
 function App() {
@@ -7,20 +13,22 @@ function App() {
     <>
       <div>
         <h1>INCEPTION</h1>
-        <img src={logo} alt="Logo" />
+        <div className="hero-img">
+        <img className="hero" src={logo} alt="Logo" />
+        </div>
       </div>
-      <div class="container">
-        <h1>Other Movies</h1>
-        <ul class="rowList">
-            <li>Black Mirror</li>
-            <li>Breaking Bad</li>
-            <li>Death Note</li>
-        </ul>
-        <ul class="rowList">
-            <li>Game of Thrones</li>
-            <li>The Walking Death</li>
-            <li>The Wire</li>
-          </ul>
+      <div className="container">
+        <h1>TV SHOW</h1>
+        <div className="rowList">
+            <img className="resize" src={blackmirror} alt="movie" />
+            <img className="resize"src={breakingbad} alt= "movie" />
+            <img className="resize"src={deathnote} alt= "movie" />
+        </div>
+        <div className="rowList">
+            <img className="resize" src={gameofthrones} alt= "movie" />
+            <img className="resize" src={thewalkingdeath} alt= "movie" />
+            <img className="resize" src={thewire} alt= "movie" />
+          </div>
         </div>
     </>
   );

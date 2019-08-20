@@ -1,36 +1,27 @@
 import React from 'react';
-import logo from './logo.jpg';
-import blackmirror from './blackmirror.jpeg';
-import breakingbad from './breakingbad.jpeg';
-import deathnote from './deathnote.jpeg';
-import gameofthrones from './gameofthrones.jpeg';
-import thewalkingdeath from './thewalkingdeath.jpeg';
-import thewire from './thewire.jpeg';
+import Gallery from './Gallery/Gallery.js';
 import './App.css';
+import NavBar from './NavBar/NavBar.js';
+import Hero from './Hero/Hero.js';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Details from './Details.js';
+import Review from './Review';
+
 
 function App() {
   return (
-    <>
+    <Router>
       <div>
-        <h1>INCEPTION</h1>
-        <div className="hero-img">
-        <img className="hero" src={logo} alt="Logo" />
-        </div>
+        <NavBar />
+        <Route exact path="/" component={Hero} />
+        <Route exact path="/" component={Gallery} />
+        <Switch>
+        <Route exact path="/gallery" component={Gallery} />
+        <Route exact path="/:details" component={Details} />
+        <Route exact path='/review/:Review' component={Review} />
+        </Switch>
       </div>
-      <div className="container">
-        <h1>TV SHOW</h1>
-        <div className="rowList">
-            <img className="resize" src={blackmirror} alt="movie" />
-            <img className="resize"src={breakingbad} alt= "movie" />
-            <img className="resize"src={deathnote} alt= "movie" />
-        </div>
-        <div className="rowList">
-            <img className="resize" src={gameofthrones} alt= "movie" />
-            <img className="resize" src={thewalkingdeath} alt= "movie" />
-            <img className="resize" src={thewire} alt= "movie" />
-          </div>
-        </div>
-    </>
+    </Router>
   );
 }
 

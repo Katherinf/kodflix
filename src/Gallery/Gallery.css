@@ -1,7 +1,10 @@
 
   .rowlist-container{
       display: inline-grid;
-      grid-template-columns: 25% 25% 25% 25%;
+      /* grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto; */
+      grid-template-areas:  "img1 img1 img2 img2"
+                            "img3 img4 img5 img6";
       width: 100%;
       height: 100%;
   }
@@ -31,18 +34,59 @@
   .cover:hover .overlay {
     background-color: red;
     opacity: 0.8;
-  
   }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-    
+  #img1 {
+    grid-area: img1;
+  }
+  #img2 {
+    grid-area: img2;
+  }
+  #img3 {
+    grid-area: img3;
+  }
+  #img4 {
+    grid-area: img4;
+  }
+  #img5 {
+    grid-area: img5;
+  }
+  #img6 {
+    grid-area: img6;
+  }
+
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+
       .cover {
         flex: 1;
     
       }
-    
+      .rowlist-container{
+        grid-template-areas:  "img1" 
+                              "img2" 
+                              "img3"
+                              "img4" 
+                              "img5"
+                              "img6";
+  }
       .overlay {
         display: inline;
     
       }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  .rowlist-container{
+    grid-template-areas:  "img1 img2" 
+                          "img3 img4" 
+                          "img5 img6";
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+  .rowlist-container{
+    grid-template-areas:  "img1 img2" 
+                          "img3 img4" 
+                          "img5 img6";
+  }
 }

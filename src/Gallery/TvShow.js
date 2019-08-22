@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-export default function TvShow({id, title, img}) {
+export default function TvShow(props) {
     return (
-        <div className='cover' id={id}>
-            <Link to={title} ><img src={img} alt={title} />
+        <div className="cover">
+            <Link to={props.title} ><img src={props.img} alt={props.title} />
             <div className="overlay">
-                <h2>{title}</h2>
+                <h2>{props.title}</h2>
             </div>
             </Link>
         </div>

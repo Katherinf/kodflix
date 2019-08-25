@@ -3,8 +3,8 @@
       display: inline-grid;
       /* grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto; */
-      grid-template-areas:  "img1 img1 img2 img2"
-                            "img3 img4 img5 img6";
+      grid-template-areas:  "black-mirror black-mirror breaking-bad breaking-bad"
+                            "death-note game-of-thrones the-walking-death the-wire";
       width: 100%;
       height: 100%;
   }
@@ -36,23 +36,23 @@
     opacity: 0.8;
   }
 
-  #img1 {
-    grid-area: img1;
+  #black-mirror {
+    grid-area: black-mirror;
   }
-  #img2 {
-    grid-area: img2;
+  #breaking-bad {
+    grid-area: breaking-bad;
   }
-  #img3 {
-    grid-area: img3;
+  #death-note {
+    grid-area: death-note;
   }
-  #img4 {
-    grid-area: img4;
+  #game-of-thrones {
+    grid-area: game-of-thrones;
   }
-  #img5 {
-    grid-area: img5;
+  #the-walking-death {
+    grid-area: the-walking-death;
   }
-  #img6 {
-    grid-area: img6;
+  #the-wire {
+    grid-area: the-wire;
   }
 
 @media only screen and (min-width: 375px) and (max-width: 812px) {
@@ -62,12 +62,12 @@
     
       }
       .rowlist-container{
-        grid-template-areas:  "img1" 
-                              "img2" 
-                              "img3"
-                              "img4" 
-                              "img5"
-                              "img6";
+        grid-template-areas:  "black-mirror" 
+                              "breaking-bad" 
+                              "ideath-note"
+                              "game-of-thrones" 
+                              "the-walking-death "
+                              "the-wire";
   }
       .overlay {
         display: inline;
@@ -77,16 +77,16 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
   .rowlist-container{
-    grid-template-areas:  "img1 img2" 
-                          "img3 img4" 
-                          "img5 img6";
+    grid-template-areas:  "black-mirror breaking-bad" 
+                          "death-note game-of-thrones" 
+                          "the-walking-death  the-wire";
   }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
   .rowlist-container{
-    grid-template-areas:  "img1 img2" 
-                          "img3 img4" 
-                          "img5 img6";
+    grid-template-areas:  "black-mirror breaking-bad" 
+                          "death-note game-of-thrones" 
+                          "the-walking-death  the-wire";
   }
 }

@@ -8,7 +8,7 @@ export default function Detailspage(props) {
 
 	//Get list of getGallery
 	let movies = getGallery();
-	// Hacer macth
+	// Find movie
 	let movie = movies.find(movie => movieId === movie.id);
 
 	//Destructure movie

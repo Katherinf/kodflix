@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import getGallery from './Gallery/get-gallery';
+import { Redirect } from 'react-router';
 
 export default function Detailspage(props) {
 	//get id from url
@@ -10,6 +11,10 @@ export default function Detailspage(props) {
 	let movies = getGallery();
 	// Find movie
 	let movie = movies.find(movie => movieId === movie.id);
+
+	if (movie === undefined) {
+		return <Redirect to='/not-found' />
+	}
 
 	//Destructure movie
 	let {title, img} = movie;

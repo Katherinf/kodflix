@@ -6,6 +6,7 @@ import Hero from './Hero/Hero.js';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Details from './Details.js';
 import Review from './Review';
+import NotFound from './NotFound.js'; 
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/" component={Hero} />
         <Route exact path="/" component={Gallery} />
         <Switch>
+        <Route exact path='/not-found' component={NotFound}/>
         <Route exact path="/gallery" component={Gallery} />
         <Route exact path="/:movie" component={Details} />
         <Route exact path='/review/:Review' component={Review} />

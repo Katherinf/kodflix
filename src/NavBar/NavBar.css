@@ -6,6 +6,7 @@
   .MFlix h2 {
     color: red;
     font-size: 2.5rem;
+    font-family: 'Chivo', sans-serif;
     
   }
   .Login {  
@@ -15,6 +16,7 @@
   }
   .Login h4{
     padding: 0 0 0 2rem;
+    font-family: 'Chivo', sans-serif;
   }
  
   @media only screen and (min-width: 320px) and (max-width: 480px) {

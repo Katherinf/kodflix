@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './NavBar/NavBar.js';
 import Hero from './Hero/Hero.js';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Details from './Details.js';
+import Details from './Details/Details.js';
 import Review from './Review';
 import NotFound from './NotFound.js'; 
 

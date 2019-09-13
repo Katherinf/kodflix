@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "express": "^4.17.1",
+    "nodemon": "^1.19.2",
+    "npm-run-all": "^4.1.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
@@ -16,7 +18,7 @@
     "eject": "react-scripts eject",
     "start-backend": "nodemon ./src/backend/App.js",
     "start-dev": "npm-run-all -p start-frontend start-backend",
-    "start":  "npm-run-all -p build start-backend"
+    "start": "npm-run-all -s build start-backend"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,8 +35,6 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "npm-run-all": "^4.1.5"
-  },
+  "devDependencies": {},
   "proxy": "http://localhost:3001"
 }

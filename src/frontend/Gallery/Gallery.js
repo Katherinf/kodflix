@@ -7,7 +7,7 @@ export default class Gallery extends Component {
       super();
       this.state = {
          tvshowList: [],
-      }
+      };
   }
  fetchTvShows () {
       fetch('/rest/shows')
@@ -26,7 +26,7 @@ export default class Gallery extends Component {
             key={show.id} 
             id={show.id} 
             title={show.title} 
-            img={show.img} />
+            img={show.img}/>
           )}
         </div>
       </>

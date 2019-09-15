@@ -1,9 +1,9 @@
-import blackmirror from './img/blackmirror.jpeg';
-import breakingbad from './img/breakingbad.jpeg';
-import deathnote from './img/deathnote.jpeg';
-import gameofthrones from './img/gameofthrones.jpeg';
-import thewalkingdeath from './img/thewalkingdeath.jpeg';
-import thewire from './img/thewire.jpeg';
+import blackmirror from './img/black-mirror.jpeg';
+import breakingbad from './img/breaking-bad.jpeg';
+import deathnote from './img/death-note.jpeg';
+import gameofthrones from './img/game-of-thrones.jpeg';
+import thewalkingdeath from './img/the-walking-death.jpeg';
+import thewire from './img/the-wire.jpeg';
 
  export default function getGallery() {
    return [

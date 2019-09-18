@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import getGallery from '../Gallery/get-gallery';
 import { Redirect } from 'react-router';
 import './Details.css'
 
 export default function Detailspage(props) {
 	//get id from url
+	// let movieId = props.match.params.movie;
+	const [movie, setMovie] = useState({});
 	let movieId = props.match.params.movie;
+	console.log(movieId)
 	//Get list of getGallery
-	let movies = getGallery();
-	// Find movie
-	let movie = movies.find(movie => movieId === movie.id);
+	useEffect(() => {		// Find movie
+		fetch('/rest/shows')
+		.then(res => res.json())
+		.then(data => {
+			setMovie(data.find(movie => movieId === movie.id))
+			});
+			}, [movieId]);
 
-	if (movie === undefined) {
-		return <Redirect to='/not-found' />
+	  if (movie === undefined) {
+		    return <Redirect to='/not-found' />
+		  }
+
+		else if (movie.id === undefined) {
+		return 	<p>Loading...</p>
 	}
 
-	//Destructure movie
-	let {title, img, synopsis} = movie;
-
+		//Destructure movie
+		let {title, id, synopsis} = movie;
 	return (
 		<div>
 			<h1>{title}</h1>
@@ -27,7 +36,7 @@ export default function Detailspage(props) {
 			<p>{synopsis}</p>
 			</div>
 			<div className='right'>
-			<img src={img} alt={title} className='details-cover'/>
+			<img src={require(`../Gallery/img/${id}.jpeg`)} alt={title} className='details-cover'/>
 			</div>
 			</div>
 			<div className='details-button'>

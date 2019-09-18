@@ -25,8 +25,7 @@ export default class Gallery extends Component {
           {this.state.tvshowList.map(show => <TvShow 
             key={show.id} 
             id={show.id} 
-            title={show.title} 
-            img={show.img}/>
+            title={show.title} />
           )}
         </div>
       </>

@@ -8,7 +8,6 @@ import Details from './Details/Details.js';
 import Review from './Review';
 import NotFound from './NotFound.js'; 
 
-
 function App() {
   return (
     <Router>

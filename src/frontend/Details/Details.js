@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router';
 import './Details.css'
+import Loading from './Loading/Loading.js';
 
 export default function Detailspage(props) {
 	//get id from url
@@ -23,7 +24,7 @@ export default function Detailspage(props) {
 		  }
 
 		else if (movie.id === undefined) {
-		return 	<p>Loading...</p>
+		return 	<Loading></Loading>
 	}
 
 		//Destructure movie
